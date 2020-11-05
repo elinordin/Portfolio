@@ -1,7 +1,7 @@
 /*--------------GENERAL--------------*/
 * {
     margin: 0;
-    padding 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -13,6 +13,7 @@
     --grey: #545454;
     --beige: #E8E5DE;
     --green: #047562;
+    --small-gap: 0.75rem;
 }
 
 body{
@@ -24,6 +25,10 @@ h1,h2,h3,h4,h5,h6{
     color: var(--black)
 }
 
+h2{
+    font-size: 1.50rem;
+}
+
 p{
     font-family: var(--paragraph-font);
     color: var(--grey);
@@ -31,4 +36,68 @@ p{
 
 nav, main{
     padding: 0 15vw;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav, footer{
+    height: 4.5rem;
+}
+
+
+/*--------------HEADER--------------*/
+header{
+    padding: 30vh 0 0 15vw;
+    height: 100vh;
+    line-height: 1.25;
+}
+
+.greeting{
+    font-weight: 800;
+}
+
+.name{
+    color: var(--green);
+    font-size: 2.75rem;
+    font-weight: 800;
+}
+
+.title{
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.header-icons i{
+    margin: var(--small-gap) var(--small-gap) 0 0;
+}
+
+.header-icons a{
+    color: var(--grey);
+}
+
+header button{
+    background-color: var(--green);
+    padding:0.6rem;
+    height: 2.25rem;
+    width: 7rem;
+    border-radius: 9px;
+    border: none;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
+    margin: var(--small-gap) var(--small-gap) var(--small-gap) 0;
+    text-align: left;
+}
+
+button a{
+    color: var(--white);
+    font-size: 0.75rem;
+    font-family: var(--heading-font);
+    font-weight: 500;
+}
+
+.fa-angle-double-down{
+    color: var(--grey);
+    display: block;
+    margin-top: 2.75rem;
 }
