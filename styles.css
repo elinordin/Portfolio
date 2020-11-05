@@ -13,7 +13,9 @@
     --grey: #545454;
     --beige: #E8E5DE;
     --green: #047562;
-    --small-gap: 0.75rem;
+    --small-gap: 1rem;
+    --middle-gap: 1.5rem;
+    --big-gap: 5rem;
 }
 
 body{
@@ -27,6 +29,8 @@ h1,h2,h3,h4,h5,h6{
 
 h2{
     font-size: 1.50rem;
+    margin-bottom: var(--middle-gap);
+    text-align: center;
 }
 
 p{
@@ -34,7 +38,7 @@ p{
     color: var(--grey);
 }
 
-nav, main{
+nav, section{
     padding: 0 15vw;
 }
 
@@ -56,6 +60,7 @@ header{
 
 .greeting{
     font-weight: 800;
+    text-align: left;
 }
 
 .name{
@@ -100,6 +105,11 @@ button a{
     color: var(--grey);
     display: block;
     margin-top: 2.75rem;
+    animation: shakeY 15s infinite;
+}
+
+section {
+    padding-top: var(--big-gap);
 }
 
 
@@ -110,6 +120,8 @@ nav{
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
 }
 
 nav i{
@@ -125,3 +137,70 @@ nav i{
     top: 0;
     width: 100vw;
 }
+
+.sticky + main {
+    padding-top: 4.5rem;
+  }
+
+
+/*--------------VALUES--------------*/
+#values{
+    background-color: var(--beige);
+    padding-bottom: var(--big-gap);
+}
+
+.value-container{
+    background-color: var(--white);
+    padding: var(--small-gap);
+    display: flex;
+    justify-content: space-between;
+}
+
+#top-value{
+    border-radius: 15px 15px 0 0;
+}
+
+#bottom-value{
+    border-radius: 0 0 15px 15px;
+}
+
+#top-value, #middle-value{
+    margin-bottom: var(--small-gap);
+}
+
+.icon-container{
+    height: 4.85rem;
+    width: 4.85rem;
+    background-color: var(--green);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px 15px 0px 15px;
+}
+
+#middle-icon-container{
+    border-radius: 15px 15px 15px 0px;
+}
+
+.icon-container i{
+    color: var(--white)
+}
+
+.text-container{
+    display: inline-block;
+    width: 60%;
+    text-align: right;
+}
+
+#middle-text-container{
+    text-align: left;
+}
+
+.text-container h4{
+    margin-bottom: var(--small-gap);
+}
+
+.text-container h4, .text-container p{
+    font-size: 0.85rem;
+}
+
