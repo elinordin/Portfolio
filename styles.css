@@ -101,3 +101,27 @@ button a{
     display: block;
     margin-top: 2.75rem;
 }
+
+
+/*--------------NAVBAR--------------*/
+nav{
+    background-color: var(--beige);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+nav i{
+    color: var(--grey);
+}
+
+.fa-volume-down{
+    margin-right: var(--small-gap)
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
