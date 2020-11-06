@@ -252,16 +252,16 @@ h4 {
     width: 65%;
 }
 
-#team-level{
-    width: 90%;
+#agile-level{
+    width: 60%
 }
 
 #solving-level{
     width: 75%;
 }
 
-#agile-level{
-    width: 60%
+#team-level{
+    width: 90%;
 }
 
 
@@ -319,3 +319,25 @@ h4 {
     background-size: cover;
 }
 
+
+/*--------------ABOUT--------------*/
+#about p {
+    text-align: center;
+    margin-bottom: var(--big-gap);
+}
+
+/*--------------FOOTER--------------*/
+footer{
+    background-color: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a{
+    color: var(--white);
+}
+
+.fa-linkedin-in, .fa-github {
+    margin-right: var(--middle-gap);
+}
