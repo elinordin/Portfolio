@@ -13,9 +13,10 @@
     --grey: #545454;
     --beige: #E8E5DE;
     --green: #047562;
-    --small-gap: 1rem;
+    --small-gap: 0.75rem;
     --middle-gap: 1.5rem;
     --big-gap: 5rem;
+    --mobile-border-radius: 15px;
 }
 
 body{
@@ -158,11 +159,11 @@ nav i{
 }
 
 #top-value{
-    border-radius: 15px 15px 0 0;
+    border-radius: var(--mobile-border-radius) var(--mobile-border-radius) 0 0;
 }
 
 #bottom-value{
-    border-radius: 0 0 15px 15px;
+    border-radius: 0 0 var(--mobile-border-radius) var(--mobile-border-radius);
 }
 
 #top-value, #middle-value{
@@ -176,11 +177,11 @@ nav i{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 15px 15px 0px 15px;
+    border-radius: var(--mobile-border-radius) var(--mobile-border-radius) 0px var(--mobile-border-radius);
 }
 
 #middle-icon-container{
-    border-radius: 15px 15px 15px 0px;
+    border-radius: var(--mobile-border-radius) var(--mobile-border-radius) var(--mobile-border-radius) 0px;
 }
 
 .icon-container i{
@@ -206,7 +207,7 @@ nav i{
 }
 
 
-/*--------------VALUES--------------*/
+/*--------------SKILLS--------------*/
 h4 {
     font-weight: 500;
     font-size: 0.75rem;
@@ -262,3 +263,59 @@ h4 {
 #agile-level{
     width: 60%
 }
+
+
+/*--------------PORTFOLIO--------------*/
+.portfolio-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 17vh;
+    grid-gap: var(--small-gap);
+}
+
+.project {
+    background-color: var(--green);
+    border: 1px solid var(--green);
+}
+
+.large {
+    grid-row: auto / span 2;
+}
+
+.top-left-corner {
+    border-radius: var(--mobile-border-radius) 0px 0px 0px;
+}
+
+.top-right-corner {
+    border-radius: 0px var(--mobile-border-radius) 0px 0px;
+}
+
+.bottom-right-corner {
+    border-radius: 0px 0px var(--mobile-border-radius) 0px;
+}
+
+.bottom-left-corner {
+    border-radius: 0px 0px 0px var(--mobile-border-radius);
+}
+
+#box1 {
+    background-image: url("images/personal-page.PNG");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#box4 {
+    background-image: url("images/rota.PNG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#box5{
+    background-image: url("images/snake.PNG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
