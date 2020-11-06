@@ -276,6 +276,7 @@ h4 {
 .project {
     background-color: var(--green);
     border: 1px solid var(--green);
+    overflow: hidden;
 }
 
 .large {
@@ -319,6 +320,36 @@ h4 {
     background-size: cover;
 }
 
+.projectInfo {
+    background-color: var(--green);
+    opacity: 80%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1.25;
+    visibility: hidden;
+}
+
+.projectInfo h4 {
+    font-weight: 800;
+    font-size: 1rem;
+    margin-bottom: var(--small-gap);
+    color: var(--white);
+}
+
+.projectInfo a {
+    color: var(--white);
+}
+
+.projectInfo a:hover {
+    font-weight: 800;
+}
+
+
 
 /*--------------ABOUT--------------*/
 #about p {
@@ -340,4 +371,11 @@ footer a{
 
 .fa-linkedin-in, .fa-github {
     margin-right: var(--middle-gap);
+}
+
+
+/*--------------KEYFRAMES--------------*/
+@keyframes fadeInProjectInfo{
+    from {opacity: 0%}
+    to {opacity: 80%}
 }
