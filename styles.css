@@ -14,7 +14,7 @@
     --beige: #E8E5DE;
     --green: #047562;
     --small-gap: 0.75rem;
-    --landscape-small-gap:2.75rem;
+    --landscape-small-gap: 1.75rem;
     --middle-gap: 1.5rem;
     --landscape-middle-gap: 3.75rem;
     --big-gap: 5rem;
@@ -32,15 +32,29 @@ h1,h2,h3,h4,h5,h6{
     color: var(--black)
 }
 
+h1 {
+    font-size: 2.75rem;;
+}
+
 h2{
     font-size: 1.50rem;
     margin-bottom: var(--middle-gap);
     text-align: center;
 }
 
+h3 {
+    font-size: 1rem;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
 p{
     font-family: var(--paragraph-font);
     color: var(--grey);
+    font-size: 0.85rem;
 }
 
 section {
@@ -48,7 +62,8 @@ section {
 }
 
 nav, section{
-    padding: 0 15vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
 }
 
 a{
@@ -75,13 +90,11 @@ header{
 
 .name{
     color: var(--green);
-    font-size: 2.75rem;
     font-weight: 800;
 }
 
 .title{
     font-weight: 800;
-    font-size: 1rem;
 }
 
 .header-icons i{
@@ -206,17 +219,8 @@ nav i{
     margin-bottom: var(--small-gap);
 }
 
-.text-container h4, .text-container p{
-    font-size: 0.85rem;
-}
-
 
 /*--------------SKILLS--------------*/
-h4 {
-    font-weight: 500;
-    font-size: 0.75rem;
-}
-
 .background-bar{
     background-color: var(--beige);
     position: relative;
@@ -318,7 +322,7 @@ h4 {
 }
 
 #box6{
-    border-radius: 0px 0px 0px var(--mobile-border-radius);
+    border-radius: 0px 0px var(--mobile-border-radius) 0px;
 }
 
 .projectInfo {
@@ -388,13 +392,57 @@ footer a{
 /*--------------LANDSCAPE STYLING--------------*/
 @media only screen and (orientation: landscape) {
     /*--------------GENERAL--------------*/
+    
+    h1 {
+        font-size: 4rem;
+    }
+
     h2{
-        font-size: 1.50rem;
+        font-size: 1.75rem;
         margin-bottom: var(--landscape-middle-gap);
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 1rem;
     }
 
     section {
         padding-top: var(--landscape-big-gap);
+    }
+
+    nav, section{
+        padding-left: 18vw;
+        padding-right: 18vw;
+    }
+
+
+    /*--------------HEADER--------------*/
+    header{
+        padding: 25vh 0 0 18vw;
+    }
+
+    .header-icons i{
+        margin: var(--landscape-small-gap) var(--landscape-small-gap) 0 0;
+    }
+
+    header button{
+        padding: 0.75rem;
+        height: 3.5rem;
+        width: 10.75rem;
+        border-radius: 14px;
+        margin: var(--landscape-small-gap) var(--landscape-small-gap) var(--landscape-small-gap) 0;
+    }
+
+    button a{
+        font-size: 1rem;
     }
 
 
@@ -403,30 +451,28 @@ footer a{
         padding-bottom: var(--landscape-big-gap);
     }
 
+    #value-boxes {
+        display: grid;
+        grid-gap: var(--landscape-small-gap);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    }
+
     .value-container{
         display: flex;
         flex-direction: column;
-    }
-
-    .icon-container{
-        height: 4.85rem;
-        width: 4.85rem;
-        border-radius: var(--landscape-border-radius) var(--landscape-border-radius) 0px var(--landscape-border-radius);
-    }
-
-    #value-boxes {
-        display: flex;
-    }
-
-    .value-container{
-        height: 18.75rem;
-        width: 18.75rem;
         padding: var(--landscape-small-gap);
+        justify-content: flex-start;
+    }
+
+    #top-value, #middle-value{
+        margin-bottom: 0px;
     }
 
     .icon-container{
-        width: 5.75rem;
-        height: 5.75rem;
+        width: 5.25rem;
+        height: 5.25rem;
+        border-radius: var(--landscape-border-radius) var(--landscape-border-radius) 0px var(--landscape-border-radius);
     }
 
     #middle-icon-container{
@@ -436,6 +482,7 @@ footer a{
     .text-container{
         width: 100%;
         text-align: left;
+        margin-top: var(--landscape-small-gap);
     }
 
     #top-value{
@@ -445,11 +492,6 @@ footer a{
     #bottom-value{
         border-radius: 0 var(--landscape-border-radius) var(--landscape-border-radius) 0;
     }
-    
-    #top-value, #middle-value{
-        margin-bottom: 0px;
-        margin-right: var(--landscape-small-gap);
-    }
 
     #middle-value{
         flex-direction: column-reverse;
@@ -457,6 +499,11 @@ footer a{
 
 
     /*--------------SKILLS--------------*/
+    #skills h4 {
+        margin-bottom: 2vh;
+        font-size: 1rem;
+    }
+
     .skill-graphs{
         display: flex;
         justify-content: space-between;
@@ -467,14 +514,14 @@ footer a{
     }
 
     .hard-skills, .soft-skills{
-        width: 32vw;
+        width: 29vw;
     }
 
 
     /*--------------PORTFOLIO--------------*/
     .portfolio-grid-container {
         grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: 25vh;
+        grid-auto-rows: 30vh;
         grid-gap: var(--landscape-small-gap);
     }
     
@@ -512,5 +559,11 @@ footer a{
     /*--------------ABOUT--------------*/
     #about p {
         margin-bottom: var(--landscape-big-gap);
+    }
+
+
+    /*--------------FOOTER--------------*/
+    .fa-linkedin-in, .fa-github {
+        margin-right: var(--landscape-middle-gap);
     }
 }
