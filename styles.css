@@ -27,6 +27,19 @@ body{
     background-color: var(--white);
 }
 
+main{
+    position: relative;
+}
+
+#particles-js{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+}
+
 h1,h2,h3,h4,h5,h6{
     font-family: var(--heading-font);
     color: var(--black)
@@ -80,6 +93,9 @@ header{
     padding: 30vh 0 0 15vw;
     height: 100vh;
     line-height: 1.25;
+    background-color: var(--white);
+    position: relative;
+    overflow: hidden;
 }
 
 .greeting{
@@ -129,6 +145,36 @@ header .fa-angle-double-down{
     display: block;
     margin-top: 2.75rem;
     animation: shakeY 15s infinite;
+}
+
+.small-green-blob{
+    height: 6.25rem;
+    position: absolute;
+    top: -5vh;
+    right: 82vw;
+    animation: blobRotation 40s infinite;
+}
+
+.big-green-blob{
+    height: 18.75rem;
+    position: absolute;
+    top: 70vh;
+    right: -25vw;    
+    animation: blobRotation 40s infinite;
+}
+
+.big-beige-blob{
+    position: absolute;
+    top: -11vh;
+    right: 7vw;
+    animation: blobRotation 20s infinite;
+}
+
+.small-beige-blob{
+    position: absolute;
+    top: 70vh;
+    right: 87vw;
+    animation: blobRotation 20s infinite;
 }
 
 
@@ -359,7 +405,7 @@ nav i{
 /*--------------ABOUT--------------*/
 #about p {
     text-align: center;
-    margin-bottom: var(--big-gap);
+    padding-bottom: var(--big-gap);
 }
 
 /*--------------FOOTER--------------*/
@@ -385,6 +431,11 @@ footer a{
 @keyframes fadeInProjectInfo{
     from {opacity: 0%}
     to {opacity: 80%}
+}
+
+@keyframes blobRotation{
+    from {transform: rotate(0deg)}
+    to {transform: rotate(359deg)}
 }
 
 
@@ -443,6 +494,35 @@ footer a{
 
     button a{
         font-size: 1rem;
+    }
+
+    .small-green-blob{
+        height: 7.5rem;
+        top: 20vh;
+        right: 19vw;
+        animation: blobRotation 30s infinite;
+    }
+    
+    .big-green-blob{
+        height: 40rem;
+        transform: rotate(5deg);
+        top: 6vh; 
+        right: 6vw; 
+        animation: none;
+    }
+    
+    .big-beige-blob{
+        height: 8.25rem;
+        top: 22vh;
+        right: 36vw;
+        animation: blobRotation 35s infinite;
+    }
+    
+    .small-beige-blob{
+        height: 5rem;
+        top: 83vh;
+        right: 13vw; 
+        animation: blobRotation 40s infinite;
     }
 
 
@@ -558,7 +638,7 @@ footer a{
     
     /*--------------ABOUT--------------*/
     #about p {
-        margin-bottom: var(--landscape-big-gap);
+        padding-bottom: var(--landscape-big-gap);
     }
 
 
