@@ -14,7 +14,7 @@
     --beige: #E8E5DE;
     --green: #047562;
     --small-gap: 0.75rem;
-    --landscape-small-gap: 1.75rem;
+    --landscape-small-gap: 1.5rem;
     --middle-gap: 1.5rem;
     --landscape-middle-gap: 3.75rem;
     --big-gap: 5rem;
@@ -400,6 +400,46 @@ nav i{
     font-weight: 800;
 }
 
+
+/*--------------POP-UP--------------*/
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(20px);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-box{
+    position: absolute;
+    background-color: var(--white);
+    height: 70vh;
+    width: 80vw;
+    border-radius: var(--landscape-border-radius);
+    padding: var(--landscape-small-gap);
+    overflow: auto;
+}
+
+.fa-times{
+    color:var(--grey);
+    position: fixed;
+    right: 18vw;
+}
+
+.popup-box h3{
+    text-align: center;
+}
+
+.popup-box h4{
+    margin-bottom: var(--small-gap);
+    margin-top: var(--landscape-small-gap);
+    font-weight: 800;
+}
 
 
 /*--------------ABOUT--------------*/
