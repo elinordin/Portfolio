@@ -21,7 +21,7 @@ let clickedProject;
 let clickedReadMore;
 
 const popupTemplate = document.getElementById("popup-template").content;
-let templateCopy = document.importNode(popupTemplate, true);
+let templateCopy;
 let numberInArray;
 
 
@@ -48,8 +48,12 @@ if (window.innerHeight < window.innerWidth){ //If landscape-view
     projects.forEach(project => {
         project.addEventListener("click", function(e){
             clickedProject = e.target;
-            console.log(clickedProject);
             displayProjectPopup(clickedProject);
+
+            if (numberInArray === 0 || numberInArray === 1 || numberInArray === 2){
+                document.getElementById("close-icon").addEventListener("click", deletePopup);
+            }
+           
         })
     })
 }
@@ -58,6 +62,10 @@ readMores.forEach(readMore => {
     readMore.addEventListener("click", function(e){
         clickedReadMore = e.target;
         displayProjectPopup(clickedReadMore);
+
+        if (numberInArray === 0 || numberInArray === 1 || numberInArray === 2){
+            document.getElementById("close-icon").addEventListener("click", deletePopup);
+        }
     })
 });
 
@@ -67,7 +75,7 @@ readMores.forEach(readMore => {
 
 /*--------------------------PROGRAM FLOW--------------------------*/
 import projectArray from "/projectdata.js";
-console.log(projectArray);
+console.log("projectArray loaded");
 
 particlesJS.load('particles-js', 'particles.json', function() {
     console.log('callback - particles.js loaded');
@@ -134,6 +142,8 @@ function displayProjectPopup(clickedProject){
     getNumberInArrayOfClickedProject(clickedProject);
 
     if (numberInArray === 0 || numberInArray === 1 || numberInArray === 2){
+        templateCopy = document.importNode(popupTemplate, true);
+
         templateCopy.querySelector(".project-title").textContent = projectArray[numberInArray].projectTitle;
         templateCopy.querySelector(".brief").textContent = projectArray[numberInArray].brief;
         templateCopy.querySelector(".goals").textContent = projectArray[numberInArray].goals;
@@ -163,4 +173,9 @@ function getNumberInArrayOfClickedProject(clickedProject){
         numberInArray = null;
     }
     return numberInArray;
+}
+
+function deletePopup(){
+    const popup = document.getElementById("popup");
+    popup.remove();
 }
