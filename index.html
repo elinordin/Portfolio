@@ -8,7 +8,7 @@
 
     <!-----------------------------LINKS----------------------------->
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <script src="script.js" type="module" defer></script>
     <script src="https://kit.fontawesome.com/249ca23121.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Rokkitt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -100,45 +100,45 @@
         <section id="portfolio">
             <h2>Portfolio</h2>
             <div class="portfolio-grid-container">
-                <button id="box1" class="project" aria-label="Click to read more about my first Hyper Island brief, my personal page">
+                <button id="personal" class="project" aria-label="Click to read more about my first Hyper Island brief, my personal page">
                     <div class="projectInfo">
                         <h4>Personal Page</h4>
-                        <a href="">Read more</a>
+                        <a id="personal-read-more" class="readMore">Read more</a>
                         <a href="https://elinordin.github.io/My-Personal-Website/" target="_blank">Open website</a>
                     </div>
                 </button>
                 <button id="box2" class="project">
                     <div class="projectInfo">
                         <h4>Coming Soon</h4>
-                        <a href=""></a>
+                        <a class=""></a>
                         <a href=""></a>
                     </div>
                 </button>
                 <button id="box3" class="project">
                     <div class="projectInfo">
                         <h4>Coming Soon</h4>
-                        <a href=""></a>
+                        <a class=""></a>
                         <a href=""></a>
                     </div>
                 </button>
-                <button id="box4" class="project" aria-label="Click to read more about my third Hyper Island brief, a habit tracker">
+                <button id="rota" class="project" aria-label="Click to read more about my third Hyper Island brief, a habit tracker">
                     <div class="projectInfo">
                         <h4>Habit Tracker</h4>
-                        <a href="">Read more</a>
+                        <a id="rota-read-more" class="readMore">Read more</a>
                         <a href="https://elinordin.github.io/Habit-tracker/" target="_blank">Open website</a>
                     </div>
                 </button>
-                <button id="box5" class="project" aria-label="Click to read more about my second Hyper Island brief, my snake game">
+                <button id="snake" class="project" aria-label="Click to read more about my second Hyper Island brief, my snake game">
                     <div class="projectInfo">
                         <h4>Snake Game</h4>
-                        <a href="">Read more</a>
+                        <a id="snake-read-more" class="readMore">Read more</a>
                         <a href="https://elinordin.github.io/Snake/" target="_blank">Open website</a>
                     </div>
                 </button>
                 <button id="box6" class="project">
                     <div class="projectInfo">
                         <h4>Coming Soon</h4>
-                        <a href=""></a>
+                        <a class=""></a>
                         <a href=""></a>
                     </div>
                 </button>
@@ -151,15 +151,24 @@
                     <span class="close-icon"><i class="fas fa-times"></i></span>
                     <h3 class="project-title">Project title</h3>
                     <h4>Brief</h4>
-                    <p class="brief">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="brief"></p>
                     <h4>Goals</h4>
-                    <p class="goal">Fermentum iaculis eu non diam phasellus vestibulum. Ut porttitor leo a diam sollicitudin. Duis convallis convallis tellus id interdum velit laoreet id donec. In mollis nunc sed id semper risus in.</p>
+                    <p class="goals"></p>
                     <h4>My Role</h4>
-                    <p class="role">Ipsum dolor sit amet consectetur adipiscing elit. Non blandit massa enim nec dui.</p>
+                    <p class="role"></p>
                     <h4>Challanges</h4>
-                    <p class="challanges">Magna fringilla urna porttitor rhoncus dolor purus non. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pellentesque elit eget gravida cum. Dignissim enim sit amet venenatis urna cursus eget nunc. Habitant morbi tristique senectus et netus et malesuada fames.</p>
+                    <p class="challanges"></p>
                     <h4>Solution</h4>
-                    <p class="solution">Est placerat in egestas erat imperdiet. Tortor pretium viverra suspendisse potenti nullam ac. Eu consequat ac felis donec et odio. Felis bibendum ut tristique et egestas quis ipsum. Eget duis at tellus at urna condimentum. Eu consequat ac felis donec et.</p>
+                    <p class="solution"></p>
+                    <h4>Learnings</h4>
+                    <ul>
+                        <li class="learning1"></li>
+                        <li class="learning2"></li>
+                        <li class="learning3"></li>
+                        <li class="learning4"></li>
+                        <li class="learning5"></li>
+                    </ul>
+                    <a class="link" href="" target="_blank">Link to the site</a>
                 </div>
             </div>
         </template>

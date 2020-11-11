@@ -64,7 +64,7 @@ h4 {
     font-size: 0.85rem;
 }
 
-p{
+p, ul{
     font-family: var(--paragraph-font);
     color: var(--grey);
     font-size: 0.85rem;
@@ -333,7 +333,7 @@ nav i{
     overflow: hidden;
 }
 
-#box1 {
+#personal {
     background-image: url("images/personal-page.PNG");
     background-position: right;
     background-repeat: no-repeat;
@@ -350,7 +350,7 @@ nav i{
     grid-row: auto / span 2;
 }
 
-#box4 {
+#rota {
     background-image: url("images/rota.PNG");
     background-position: center;
     background-repeat: no-repeat;
@@ -358,7 +358,7 @@ nav i{
     grid-row: auto / span 2;
 }
 
-#box5{
+#snake{
     background-image: url("images/snake.PNG");
     background-position: center;
     background-repeat: no-repeat;
@@ -413,6 +413,7 @@ nav i{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .popup-box{
@@ -423,12 +424,18 @@ nav i{
     border-radius: var(--landscape-border-radius);
     padding: var(--landscape-small-gap);
     overflow: auto;
+    cursor: auto;
 }
 
 .fa-times{
     color:var(--grey);
     position: fixed;
     right: 18vw;
+}
+
+.fa-times:hover{
+    color: var(--black);
+    cursor: pointer;
 }
 
 .popup-box h3{
@@ -439,6 +446,23 @@ nav i{
     margin-bottom: var(--small-gap);
     margin-top: var(--landscape-small-gap);
     font-weight: 800;
+}
+
+.popup-box ul{
+    padding-left: var(--small-gap);
+}
+
+.link{
+    color: var(--grey);
+    font-family: var(--paragraph-font);
+    font-size: 1.1rem;
+    margin-top: var(--landscape-small-gap);
+    display: block;
+    font-weight: 800;
+}
+
+.link:hover{
+    color: var(--black);
 }
 
 
@@ -501,7 +525,7 @@ footer a{
         font-size: 1.25rem;
     }
 
-    p {
+    p, ul{
         font-size: 1rem;
     }
 
@@ -645,7 +669,7 @@ footer a{
         grid-gap: var(--landscape-small-gap);
     }
     
-    #box1{
+    #personal{
         border-radius: var(--landscape-border-radius) 0px 0px 0px;
     }
 
@@ -660,12 +684,12 @@ footer a{
         grid-column: auto / span 2;
     }
     
-    #box4 {
+    #rota {
         background-position: top;
         grid-row: auto / span 1;
     }
     
-    #box5{
+    #snake{
         grid-row: auto / span 1;
         border-radius: 0px 0px 0px var(--landscape-border-radius);
     }
