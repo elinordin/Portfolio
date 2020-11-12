@@ -4,9 +4,14 @@ let bigGap = 72;
 
 const navbar = document.getElementById("navbar");
 let navbarPosition = navbar.offsetTop;
-const toggleMenuIcon = document.getElementById("toggleMenu");
+const toggleMenuIcon = document.getElementById("toggle-menu");
 const menu = document.getElementById("menu");
 let menuDisplayed = false;
+
+const toggleSoundBtn = document.getElementById("toggle-sound");
+const toggleSoundIcon = document.getElementsByClassName("toggle-sound-icon")
+let soundPlaying = false;
+const song = document.getElementById("song");
 
 let skillsPosition = document.getElementById("skills").offsetTop;
 const hardSkills = Array.from(document.getElementsByClassName("hard-progress-bar"));
@@ -29,6 +34,8 @@ window.addEventListener("scroll", toggleStickyNavbar);
 window.addEventListener("scroll", animateProgress)
 
 toggleMenuIcon.addEventListener("click", toggleMenu);
+toggleSoundBtn.addEventListener("click", toggleSound);
+
 
 
 if (window.innerHeight < window.innerWidth){ //If landscape-view
@@ -86,10 +93,10 @@ particlesJS.load('particles-js', 'particles.json', function() {
 function toggleStickyNavbar(){
     if (window.pageYOffset >= navbarPosition){
         navbar.classList.add("sticky");
-        menu.classList.add("stickyMenu");
+        menu.classList.add("sticky-menu");
     } else{
         navbar.classList.remove("sticky");
-        menu.classList.remove("stickyMenu");
+        menu.classList.remove("sticky-menu");
     }
 }
 
@@ -100,6 +107,22 @@ function toggleMenu(){
     } else if (menuDisplayed){
         menu.style.display = "none";
         menuDisplayed = false;
+    }
+}
+
+function toggleSound(){
+    if(soundPlaying === false){
+        toggleSoundIcon[0].classList.remove("fa-volume-down");
+        toggleSoundIcon[0].classList.add("fa-volume-mute");
+        toggleSoundIcon[0].style.animation = "none";
+        song.play();
+        soundPlaying = true;
+    } else if(soundPlaying){
+        toggleSoundIcon[0].classList.remove("fa-volume-mute");
+        toggleSoundIcon[0].classList.add("fa-volume-down");
+        toggleSoundIcon[0].style.animation = "heartBeat 4s infinite";
+        song.pause();
+        soundPlaying = false;
     }
 }
 

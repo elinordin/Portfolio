@@ -203,8 +203,10 @@ nav i{
     color: var(--grey);
 }
 
-.fa-volume-down{
-    margin-right: var(--small-gap)
+.toggle-sound-icon{
+    margin-right: var(--small-gap);
+    animation: heartBeat 4s infinite;
+    cursor: pointer;
 }
 
 .sticky{
@@ -241,13 +243,14 @@ menu ul{
 
 menu a{
     color: var(--grey);
+    transition: 0.2s;
 }
 
 menu a:hover{
     font-weight: 800;
 }
 
-.stickyMenu{
+.sticky-menu{
     position: fixed;
     top: 4.4rem;
 }
@@ -597,7 +600,7 @@ footer i:hover{
 
 
     /*--------------NAVBAR/MENU--------------*/
-    #toggleMenu{
+    #toggle-menu{
         display: none;
     }
 
@@ -623,7 +626,7 @@ footer i:hover{
         margin-left: var(--landscape-small-gap);
     }
     
-    .stickyMenu{
+    .sticky-menu{
         top: 0;
     }
 
