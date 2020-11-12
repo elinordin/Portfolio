@@ -118,6 +118,10 @@ header{
     margin: var(--small-gap) var(--small-gap) 0 0;
 }
 
+.header-icons i:hover{
+    animation: pulse 1s;
+}
+
 .header-icons a{
     color: var(--grey);
 }
@@ -132,6 +136,11 @@ header button{
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05);
     margin: var(--small-gap) var(--small-gap) var(--small-gap) 0;
     text-align: left;
+}
+
+.frontpage-button:hover{
+    animation: pulse 1s;
+    cursor: pointer;
 }
 
 button a{
@@ -522,6 +531,10 @@ footer{
 
 footer a{
     color: var(--white);
+}
+
+footer i:hover{
+    animation: pulse 1s;
 }
 
 .fa-linkedin-in, .fa-github {

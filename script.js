@@ -74,7 +74,7 @@ readMores.forEach(readMore => {
 
 
 /*--------------------------PROGRAM FLOW--------------------------*/
-import projectArray from "/projectdata.js";
+import projectArray from "./projectdata.js";
 console.log("projectArray loaded");
 
 particlesJS.load('particles-js', 'particles.json', function() {
