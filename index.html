@@ -17,7 +17,7 @@
 
 
 <body>
-    <header>
+    <header id="header">
             <h2 class="greeting">Hello, I'm</h2>
             <h1 class="name">Elin Nordin</h1>
             <h3 class="title">A Frontend Developer</h3>
@@ -38,9 +38,18 @@
     </header>
 
     <nav id="navbar">
-        <div id="toggleSound" aria-label="Toggle sound icon"><i class="fas fa-2x fa-volume-down"></i></div>
-        <div id="toggleMenu" aria-label="Toggle menu icon"><i class="fas fa-2x fa-bars"></i></div>
+            <div id="toggleSound" aria-label="Click to toggle sound"><i class="fas fa-2x fa-volume-down"></i></div>
+            <div id="toggleMenu" aria-label="Click to toggle menu"><i class="fas fa-2x fa-bars"></i></div>
+            <menu id="menu">
+                <ul>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#header">Contact</a></li>
+                </ul>
+            </menu>
     </nav>
+    
 
     <main>
         <section id="values">

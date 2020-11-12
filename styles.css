@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -207,6 +208,43 @@ nav i{
     padding-top: 4.5rem;
 }
 
+menu{
+    display: none;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    top: 4.4rem;
+    padding-top: var(--small-gap);
+    padding-bottom: var(--landscape-small-gap);
+    background-color: var(--beige);
+    padding-right: 15vw;
+    z-index: 3;
+    text-align: right;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+menu ul{
+    list-style: none;
+    font-size: 1rem;
+    font-family: var(--heading-font);
+    line-height: 1.5;
+}
+
+menu a{
+    color: var(--grey);
+}
+
+menu a:hover{
+    font-weight: 800;
+}
+
+.stickyMenu{
+    position: fixed;
+    top: 4.4rem;
+}
+
+
+
 
 /*--------------VALUES--------------*/
 #values{
@@ -331,6 +369,7 @@ nav i{
     background-color: var(--green);
     border: 1px solid var(--green);
     overflow: hidden;
+    cursor: pointer;
 }
 
 #personal {
@@ -383,6 +422,7 @@ nav i{
     text-align: center;
     line-height: 1.25;
     visibility: hidden;
+    cursor: auto;
 }
 
 .projectInfo h4 {
@@ -398,6 +438,7 @@ nav i{
 
 .projectInfo a:hover {
     font-weight: 800;
+    cursor: pointer;
 }
 
 
@@ -413,7 +454,6 @@ nav i{
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 }
 
 .popup-box{
@@ -424,7 +464,6 @@ nav i{
     border-radius: var(--landscape-border-radius);
     padding: var(--landscape-small-gap);
     overflow: auto;
-    cursor: auto;
 }
 
 .fa-times{
@@ -533,9 +572,46 @@ footer a{
         padding-top: var(--landscape-big-gap);
     }
 
-    nav, section{
+    section{
         padding-left: 18vw;
         padding-right: 18vw;
+    }
+
+    nav {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+
+    /*--------------NAVBAR/MENU--------------*/
+    #toggleMenu{
+        display: none;
+    }
+
+    #menu{
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: flex-end;
+        top: 0;
+        height: 4.5rem;
+        right: 0;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+        padding: 0;
+    }
+    
+    menu ul{
+        line-height: 0;
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+    menu li{
+        margin-left: var(--landscape-small-gap);
+    }
+    
+    .stickyMenu{
+        top: 0;
     }
 
 

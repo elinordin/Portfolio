@@ -4,6 +4,9 @@ let bigGap = 72;
 
 const navbar = document.getElementById("navbar");
 let navbarPosition = navbar.offsetTop;
+const toggleMenuIcon = document.getElementById("toggleMenu");
+const menu = document.getElementById("menu");
+let menuDisplayed = false;
 
 let skillsPosition = document.getElementById("skills").offsetTop;
 const hardSkills = Array.from(document.getElementsByClassName("hard-progress-bar"));
@@ -15,13 +18,8 @@ const mailIcons = Array.from(document.getElementsByClassName("fa-envelope"));
 
 const projects = Array.from(document.getElementsByClassName("project"));
 const readMores = Array.from(document.getElementsByClassName("readMore"));
-let hoveredProject;
-let unHoveredProject;
-let clickedProject;
-let clickedReadMore;
 
 const popupTemplate = document.getElementById("popup-template").content;
-let templateCopy;
 let numberInArray;
 
 
@@ -30,16 +28,18 @@ let numberInArray;
 window.addEventListener("scroll", toggleStickyNavbar);
 window.addEventListener("scroll", animateProgress)
 
+toggleMenuIcon.addEventListener("click", toggleMenu);
+
 
 if (window.innerHeight < window.innerWidth){ //If landscape-view
     makeIconsBigger();
     projects.forEach(project => {
         project.addEventListener("mouseenter", function(e){
-            hoveredProject = e.target;
+            let hoveredProject = e.target;
             displayProjectInfo(hoveredProject);
         });
         project.addEventListener("mouseleave", function(e){
-            unHoveredProject = e.target;
+            let unHoveredProject = e.target;
             hideProjectInfo(unHoveredProject);
         })
     })
@@ -47,7 +47,7 @@ if (window.innerHeight < window.innerWidth){ //If landscape-view
     makeIconsSmaller();
     projects.forEach(project => {
         project.addEventListener("click", function(e){
-            clickedProject = e.target;
+            let clickedProject = e.target;
             displayProjectPopup(clickedProject);
 
             if (numberInArray === 0 || numberInArray === 1 || numberInArray === 2){
@@ -60,7 +60,7 @@ if (window.innerHeight < window.innerWidth){ //If landscape-view
 
 readMores.forEach(readMore => {
     readMore.addEventListener("click", function(e){
-        clickedReadMore = e.target;
+        let clickedReadMore = e.target;
         displayProjectPopup(clickedReadMore);
 
         if (numberInArray === 0 || numberInArray === 1 || numberInArray === 2){
@@ -86,8 +86,20 @@ particlesJS.load('particles-js', 'particles.json', function() {
 function toggleStickyNavbar(){
     if (window.pageYOffset >= navbarPosition){
         navbar.classList.add("sticky");
+        menu.classList.add("stickyMenu");
     } else{
         navbar.classList.remove("sticky");
+        menu.classList.remove("stickyMenu");
+    }
+}
+
+function toggleMenu(){
+    if(menuDisplayed === false){
+        menu.style.display = "block";
+        menuDisplayed = true;
+    } else if (menuDisplayed){
+        menu.style.display = "none";
+        menuDisplayed = false;
     }
 }
 
@@ -142,7 +154,7 @@ function displayProjectPopup(clickedProject){
     getNumberInArrayOfClickedProject(clickedProject);
 
     if (numberInArray === 0 || numberInArray === 1 || numberInArray === 2){
-        templateCopy = document.importNode(popupTemplate, true);
+        let templateCopy = document.importNode(popupTemplate, true);
 
         templateCopy.querySelector(".project-title").textContent = projectArray[numberInArray].projectTitle;
         templateCopy.querySelector(".brief").textContent = projectArray[numberInArray].brief;
