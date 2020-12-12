@@ -392,12 +392,19 @@ menu a:hover{
     border-radius: var(--mobile-border-radius) 0px 0px 0px;
 }
 
-#box2{
+#doosti {
+    background-image: url("images/doosti.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 0px var(--mobile-border-radius) 0px 0px;
     grid-row: auto / span 2;
 }
 
-#box3{
+#business-cards {
+    background-image: url("images/business-cards.PNG");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
     grid-row: auto / span 2;
 }
 
@@ -765,13 +772,13 @@ footer i:hover{
         border-radius: var(--landscape-border-radius) 0px 0px 0px;
     }
 
-    #box2{
+    #doosti{
         grid-row: auto / span 1;
         grid-column: auto / span 2;
         border-radius: 0px var(--landscape-border-radius) 0px 0px;
     }
     
-    #box3{
+    #business-cards{
         grid-row: auto / span 1;
         grid-column: auto / span 2;
     }

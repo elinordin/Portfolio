@@ -70,7 +70,7 @@ readMores.forEach(readMore => {
         let clickedReadMore = e.target;
         displayProjectPopup(clickedReadMore);
 
-        if (numberInArray === 0 || numberInArray === 1 || numberInArray === 2){
+        if (numberInArray != null){
             document.getElementById("close-icon").addEventListener("click", deletePopup);
         }
     })
@@ -176,11 +176,12 @@ function makeIconsSmaller(){
 function displayProjectPopup(clickedProject){
     getNumberInArrayOfClickedProject(clickedProject);
 
-    if (numberInArray === 0 || numberInArray === 1 || numberInArray === 2){
+    if (numberInArray != null){
         let templateCopy = document.importNode(popupTemplate, true);
 
         templateCopy.querySelector(".project-title").textContent = projectArray[numberInArray].projectTitle;
         templateCopy.querySelector(".brief").textContent = projectArray[numberInArray].brief;
+        templateCopy.querySelector(".time").textContent = projectArray[numberInArray].time;
         templateCopy.querySelector(".goals").textContent = projectArray[numberInArray].goals;
         templateCopy.querySelector(".role").textContent = projectArray[numberInArray].role;
         templateCopy.querySelector(".challanges").textContent = projectArray[numberInArray].challanges;
@@ -204,6 +205,10 @@ function getNumberInArrayOfClickedProject(clickedProject){
         numberInArray = 1;
     } else if (clickedProject.id === "rota" || clickedProject.id==="rota-read-more"){
         numberInArray = 2;
+    } else if (clickedProject.id === "business-cards" || clickedProject.id==="business-cards-read-more"){
+        numberInArray = 3;
+    } else if (clickedProject.id === "doosti" || clickedProject.id==="doosti-read-more"){
+        numberInArray = 4;
     } else {
         numberInArray = null;
     }
